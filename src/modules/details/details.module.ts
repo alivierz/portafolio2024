@@ -10,5 +10,6 @@ import { Profile, profileSchema } from 'src/config/schemas/profile.schema';
   imports: [
     MongooseModule.forFeature([{ name: Profile.name, schema: profileSchema }]),
   ],
+  exports: [DetailsService],
 })
 export class DetailsModule {}
