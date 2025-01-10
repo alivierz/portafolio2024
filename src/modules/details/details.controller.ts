@@ -22,7 +22,7 @@ export class DetailsController {
   //? esto solo lo usamos para documentar
   @ApiOkResponse({ type: ProfileEntity })
   @UseFilters(AllExeptionFilter)
-  GetProfileDateData(@Query() data: DetailsDto) {
+  GetProfileDateData(@Body() data: DetailsDto) {
     try {
       return this.detailsService.getProfileService(data).catch((_err) => {
         throw new HttpException(
